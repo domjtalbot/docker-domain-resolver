@@ -4,12 +4,16 @@
 
 <p align="center">🐳 A minimal config domain resolver for Docker.</p>
 
-<p align="center">
-  <a href="https://hub.docker.com/r/domjtalbot/domain-resolver">
-    <img src="https://img.shields.io/docker/image-size/domjtalbot/domain-resolver/latest?style=flat&logoColor=white&logo=docker"
-         alt="Docker Image size">
-  </a>
-</p>
+<div align="center">
+  <p dir="auto">
+    <a href="https://hub.docker.com/r/domjtalbot/domain-resolver">
+      <img src="https://img.shields.io/docker/image-size/domjtalbot/domain-resolver/latest?style=flat&logoColor=white&logo=docker" alt="Docker Image size" />
+    </a>
+    <a href="https://github.com/sponsors/domjtalbot">
+      <img src="https://img.shields.io/badge/Sponsor @domjtalbot-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="Sponsor @domjtalbot on GitHub!" />
+    </a>
+  </p>
+</div>
 
 <br/>
 
