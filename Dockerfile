@@ -5,7 +5,7 @@ FROM alpine:$ALPINE_VERSION
 
 # Set the default values used by env variables
 
-ARG DEFAULT_DOMAIN=.test
+ARG DEFAULT_DOMAIN=test
 
 # Default to Cloudflare DNS
 ARG DEFAULT_NS1=1.0.0.1
