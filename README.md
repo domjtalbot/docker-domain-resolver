@@ -1,3 +1,5 @@
+<br/>
+
 <h1 align="center">Domain Resolver</h1>
 
 <p align="center">🐳 A minimal config domain resolver for Docker.</p>
