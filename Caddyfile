@@ -1,0 +1,14 @@
+# Configuration file for Caddy used by Docker.
+# https://caddyserver.com
+
+{
+  local_certs
+}
+
+{$DOMAIN} {
+  respond "Hello World!"
+}
+
+www.{$DOMAIN} {
+    redir https://{$DOMAIN}/
+}

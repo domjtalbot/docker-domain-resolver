@@ -1,10 +1,13 @@
-# Domain Resolver
+<h1 align="center">Domain Resolver</h1>
 
-🐳 A minimal config domain resolver for Docker.
+<p align="center">🐳 A minimal config domain resolver for Docker.</p>
 
-[![Image Size](https://img.shields.io/docker/image-size/domjtalbot/domain-resolver/latest?style=flat&logoColor=white&logo=docker)](https://hub.docker.com/r/domjtalbot/domain-resolver)
-
-
+<p align="center">
+  <a href="https://hub.docker.com/r/domjtalbot/domain-resolver">
+    <img src="https://img.shields.io/docker/image-size/domjtalbot/domain-resolver/latest?style=flat&logoColor=white&logo=docker"
+         alt="Docker Image size">
+  </a>
+</p>
 
 <br/>
 
@@ -13,7 +16,6 @@
 Custom local domains are a great tool when developing software, but their set-up steps can be tedious and often forgotten.
 
 This Docker image automates part of the process of setting up a local domain so that you can focus on your development.
-
 
 <br/>
 
@@ -27,13 +29,11 @@ There are three parts to setting up a local domain with Docker:
 
 The `domain-resolver` Docker image is responsible for step 2, directing traffic from the Host machine to other Docker services.
 
-
 <br/>
 
 ## How to use
 
 The `domain-resolver` docker image is available from both [GitHub Container Registry (GHCR)](https://github.com/domjtalbot/docker-domain-resolver/pkgs/container/domain-resolver) and [Docker Hub](https://hub.docker.com/r/domjtalbot/domain-resolver).
-
 
 ### Docker Compose
 
@@ -49,7 +49,7 @@ services:
 
     # Docker Hub
     image: domjtalbot/domain-resolver
-    
+
     environment:
       # The domain you want to resolve
       # (Defaults to `test`)
@@ -64,15 +64,16 @@ services:
       # (Defaults to #)
       # - ADDITIONAL_CONFIG=#
     ports:
-      - '127.0.0.1:53:53/udp'
+      - "127.0.0.1:53:53/udp"
     volumes:
-      # Allow domain-resolver to check if the 
+      # Allow domain-resolver to check if the
       # domain has been configured on the host.
       - /etc/resolver:/etc/resolver:ro
     restart: always
 ```
 
 You can then run Docker compose using:
+
 ```bash
 docker-compose up -d
 ```
@@ -88,7 +89,6 @@ To help automate the creation of a resolver on the Host machine, you can use the
 ```
 
 > Please note that the process of creating a resolver varies depending on the type of Host. The `create-host-resolver` script currently only supports macOS.
-
 
 <br/>
 
@@ -133,6 +133,7 @@ www.{$DOMAIN} {
 ```
 
 `docker-compose.yml`
+
 ```yml
 services:
   domain-resolver:
@@ -141,7 +142,7 @@ services:
     environment:
       - DOMAIN=$DOCKER_DOMAIN
     ports:
-      - '127.0.0.1:53:53/udp'
+      - "127.0.0.1:53:53/udp"
     volumes:
       - /etc/resolver:/etc/resolver:ro
     restart: always
@@ -152,8 +153,8 @@ services:
     environment:
       - DOMAIN=$DOCKER_DOMAIN
     ports:
-      - '80:80'
-      - '443:443'
+      - "80:80"
+      - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
