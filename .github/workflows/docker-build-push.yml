@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-push:
-    name: Build & Push Docker Images
+    name: Build & Push
     runs-on: ubuntu-latest
 
     steps:
