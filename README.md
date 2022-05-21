@@ -178,3 +178,10 @@ To run the example locally use:
 ```bash
 ./create-host-resolver.sh --domain example.dockerdomainresolver && docker-compose up -d
 ```
+
+<br/>
+<br/>
+
+<p align="center">♥ 🐳</p>
+
+<br/>
