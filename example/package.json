@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start": "DOCKER_DOMAIN=example.dockerdomainresolver ../create-host-resolver.sh --domain $DOCKER_DOMAIN && docker-compose up -d"
+  }
+}
