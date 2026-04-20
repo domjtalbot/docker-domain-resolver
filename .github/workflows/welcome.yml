@@ -26,7 +26,7 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add label to first time contributoins
-        uses: Code-Hex/first-label-interaction@68f71358707a913224afdbf8dc47764807345d4c # tag=v1.0.2
+        uses: Code-Hex/first-label-interaction@9af6a47f0aba77c507f7ea541e607fff85ad0590 # v1.0.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-labels: '["first time contribution"]'
